@@ -64,19 +64,19 @@ $GLOBALS['HTML_QUICKFORM_ELEMENT_TYPES'] =
  * @global array $GLOBALS['_HTML_QuickForm_registered_rules']
  */
 $GLOBALS['_HTML_QuickForm_registered_rules'] = array(
-    'required'      => array('html_quickform_rule_required', 'HTML/QuickForm/Rule/Required.php'),
-    'maxlength'     => array('html_quickform_rule_range',    'HTML/QuickForm/Rule/Range.php'),
-    'minlength'     => array('html_quickform_rule_range',    'HTML/QuickForm/Rule/Range.php'),
-    'rangelength'   => array('html_quickform_rule_range',    'HTML/QuickForm/Rule/Range.php'),
-    'email'         => array('html_quickform_rule_email',    'HTML/QuickForm/Rule/Email.php'),
-    'regex'         => array('html_quickform_rule_regex',    'HTML/QuickForm/Rule/Regex.php'),
-    'lettersonly'   => array('html_quickform_rule_regex',    'HTML/QuickForm/Rule/Regex.php'),
-    'alphanumeric'  => array('html_quickform_rule_regex',    'HTML/QuickForm/Rule/Regex.php'),
-    'numeric'       => array('html_quickform_rule_regex',    'HTML/QuickForm/Rule/Regex.php'),
-    'nopunctuation' => array('html_quickform_rule_regex',    'HTML/QuickForm/Rule/Regex.php'),
-    'nonzero'       => array('html_quickform_rule_regex',    'HTML/QuickForm/Rule/Regex.php'),
-    'callback'      => array('html_quickform_rule_callback', 'HTML/QuickForm/Rule/Callback.php'),
-    'compare'       => array('html_quickform_rule_compare',  'HTML/QuickForm/Rule/Compare.php')
+    'required'      => array('HTML_QuickForm_Rule_Required', 'HTML/QuickForm/Rule/Required.php'),
+    'maxlength'     => array('HTML_QuickForm_Rule_Range',    'HTML/QuickForm/Rule/Range.php'),
+    'minlength'     => array('HTML_QuickForm_Rule_Range',    'HTML/QuickForm/Rule/Range.php'),
+    'rangelength'   => array('HTML_QuickForm_Rule_Range',    'HTML/QuickForm/Rule/Range.php'),
+    'email'         => array('HTML_QuickForm_Rule_Email',    'HTML/QuickForm/Rule/Email.php'),
+    'regex'         => array('HTML_QuickForm_Rule_Regex',    'HTML/QuickForm/Rule/Regex.php'),
+    'lettersonly'   => array('HTML_QuickForm_Rule_Regex',    'HTML/QuickForm/Rule/Regex.php'),
+    'alphanumeric'  => array('HTML_QuickForm_Rule_Regex',    'HTML/QuickForm/Rule/Regex.php'),
+    'numeric'       => array('HTML_QuickForm_Rule_Regex',    'HTML/QuickForm/Rule/Regex.php'),
+    'nopunctuation' => array('HTML_QuickForm_Rule_Regex',    'HTML/QuickForm/Rule/Regex.php'),
+    'nonzero'       => array('HTML_QuickForm_Rule_Regex',    'HTML/QuickForm/Rule/Regex.php'),
+    'callback'      => array('HTML_QuickForm_Rule_Callback', 'HTML/QuickForm/Rule/Callback.php'),
+    'compare'       => array('HTML_QuickForm_Rule_Compare',  'HTML/QuickForm/Rule/Compare.php')
 );
 
 // {{{ error codes
@@ -1375,13 +1375,13 @@ class HTML_QuickForm extends HTML_Common
         // automatically register the rule if requested
 //        include_once 'HTML/QuickForm/RuleRegistry.php';
         $ruleName = false;
-        if (is_object($name) && is_a($name, 'html_quickform_rule')) {
-            $ruleName = !empty($name->name)? $name->name: strtolower(get_class($name));
+        if (is_object($name) && is_a($name, 'HTML_QuickForm_Rule')) {
+            $ruleName = !empty($name->name)? $name->name: get_class($name);
         } elseif (is_string($name) && class_exists($name)) {
             $parent = strtolower($name);
             do {
-                if ('html_quickform_rule' == strtolower($parent)) {
-                    $ruleName = strtolower($name);
+                if ('HTML_QuickForm_Rule' == $parent) {
+                    $ruleName = $name;
                     break;
                 }
             } while ($parent = get_parent_class($parent));
