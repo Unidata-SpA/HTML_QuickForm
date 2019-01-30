@@ -8,8 +8,6 @@ if (defined('E_DEPRECATED')) {
     error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT);
 }
 
-require_once "HTML/QuickForm.php";
-
 $form = new HTML_QuickForm('register', 'post'); 
 $form->addElement('text', 't1', 'Text'); 
 $form->addElement('textarea','ta','Text area');

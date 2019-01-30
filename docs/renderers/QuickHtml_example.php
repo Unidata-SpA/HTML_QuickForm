@@ -19,8 +19,6 @@
 * @ignore
 */
 
-require_once ("HTML/QuickForm.php");
-require_once ("HTML/QuickForm/Renderer/QuickHtml.php");
 $form =& new HTML_QuickForm('tmp_form','POST');
 // get our render
 $renderer =& new HTML_QuickForm_Renderer_QuickHtml();

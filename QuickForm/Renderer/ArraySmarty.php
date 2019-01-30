@@ -24,10 +24,6 @@
  * @link        http://pear.php.net/package/HTML_QuickForm
  */
 
-/**
- * A concrete renderer for HTML_QuickForm, makes an array of form contents
- */ 
-require_once 'HTML/QuickForm/Renderer/Array.php';
 
 /**
  * A static renderer for HTML_QuickForm, makes an array of form content

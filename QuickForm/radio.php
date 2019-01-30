@@ -22,10 +22,6 @@
  * @link        http://pear.php.net/package/HTML_QuickForm
  */
 
-/**
- * Base class for <input /> form elements
- */
-require_once 'HTML/QuickForm/input.php';
 
 /**
  * HTML class for a radio type element

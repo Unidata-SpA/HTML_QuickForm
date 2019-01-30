@@ -9,8 +9,6 @@
  * @ignore
  */
 
-require_once 'HTML/QuickForm.php';
-
 $form =& new HTML_QuickForm('builtin');
 
 // We need an additional label below the element

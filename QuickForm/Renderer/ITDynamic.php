@@ -21,10 +21,6 @@
  * @link        http://pear.php.net/package/HTML_QuickForm
  */
 
-/**
- * An abstract base class for QuickForm renderers
- */
-require_once 'HTML/QuickForm/Renderer.php';
 
 /**
  * A concrete renderer for HTML_QuickForm, using Integrated Templates.

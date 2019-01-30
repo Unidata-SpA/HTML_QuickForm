@@ -21,10 +21,6 @@
  * @link        http://pear.php.net/package/HTML_QuickForm
  */
 
-/**
- * A concrete renderer for HTML_QuickForm, based on QuickForm 2.x built-in one
- */ 
-require_once 'HTML/QuickForm/Renderer/Default.php';
 
 /**
  * A renderer that makes it quick and easy to create customized forms.

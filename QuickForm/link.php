@@ -22,10 +22,6 @@
  * @link        http://pear.php.net/package/HTML_QuickForm
  */
 
-/**
- * HTML class for static data
- */ 
-require_once 'HTML/QuickForm/static.php';
 
 /**
  * HTML class for a link type field

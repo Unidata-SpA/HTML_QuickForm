@@ -11,8 +11,6 @@
 * @ignore
 */
 
-require_once 'HTML/QuickForm.php';
-
 $form =& new HTML_QuickForm('frmTest', 'get');
 
 // Use a two-label template for the elements that require some comments

@@ -11,8 +11,6 @@
 * @ignore
 */
 
-require_once 'HTML/QuickForm.php';
-
 function _validate_shipping($values)
 {
     // In Real Life (tm) you will probably query your DB for these

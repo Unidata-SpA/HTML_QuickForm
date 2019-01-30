@@ -21,10 +21,6 @@
  * @link        http://pear.php.net/package/HTML_QuickForm
  */
 
-/**
- * Class for <select></select> elements
- */
-require_once 'HTML/QuickForm/select.php';
 
 /**
  * Hidden select pseudo-element

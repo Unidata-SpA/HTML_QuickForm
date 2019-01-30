@@ -22,10 +22,6 @@
  * @link        http://pear.php.net/package/HTML_QuickForm
  */
 
-/**
- * HTML class for a checkbox type field
- */
-require_once 'HTML/QuickForm/checkbox.php';
 
 /**
  * HTML class for an advanced checkbox type field

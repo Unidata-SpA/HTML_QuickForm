@@ -9,9 +9,6 @@
  * @ignore
  */
 
-require_once 'HTML/QuickForm.php';
-require_once 'HTML/QuickForm/Rule.php';
-
 /**
  * Checks that a numeric value is within range 
  *

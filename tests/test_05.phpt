@@ -9,7 +9,6 @@ if (defined('E_DEPRECATED')) {
 } else {
     error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT);
 }
-require_once 'HTML/QuickForm.php';
 $form = new HTML_QuickForm('firstForm');
 $group[] =& HTML_QuickForm::createElement('text', 'first', 'First');
 $group[] =& HTML_QuickForm::createElement('text', 'last', 'Last');

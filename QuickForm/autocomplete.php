@@ -21,10 +21,6 @@
  * @link        http://pear.php.net/package/HTML_QuickForm
  */
 
-/**
- * HTML class for a text field
- */
-require_once 'HTML/QuickForm/text.php';
 
 /**
  * HTML class for an autocomplete element

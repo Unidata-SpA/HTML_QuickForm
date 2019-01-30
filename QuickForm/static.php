@@ -21,10 +21,6 @@
  * @link        http://pear.php.net/package/HTML_QuickForm
  */
 
-/**
- * Base class for form elements
- */ 
-require_once 'HTML/QuickForm/element.php';
 
 /**
  * HTML class for static data

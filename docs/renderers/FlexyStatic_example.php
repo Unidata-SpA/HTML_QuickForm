@@ -10,10 +10,6 @@
  * @ignore
  */
 
-require_once('HTML/Template/Flexy.php');
-require_once('HTML/QuickForm.php');
-require_once('HTML/QuickForm/Renderer/ObjectFlexy.php');
-
 function myProcess($values)
 {
 	echo "<pre>";

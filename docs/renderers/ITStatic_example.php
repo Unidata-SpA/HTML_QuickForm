@@ -11,8 +11,6 @@
 
 // $Id$
 
-require_once('HTML/QuickForm.php');
-require_once('HTML/QuickForm/Renderer/ITStatic.php');
 require_once('HTML/Template/ITX.php');
 
 

@@ -9,8 +9,6 @@
  * @ignore
  */
 
-require_once 'HTML/QuickForm.php';
-
 $template =
 '<tr>
     <td align="right" valign="top">

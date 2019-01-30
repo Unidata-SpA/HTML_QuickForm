@@ -9,10 +9,8 @@
  * @ignore
  */
 
-require_once 'HTML/QuickForm.php';
-require_once 'HTML/QuickForm/Renderer/ITDynamic.php';
 // can use either HTML_Template_Sigma or HTML_Template_ITX
-require_once 'HTML/Template/ITX.php';
+//require_once 'HTML/Template/ITX.php';
 // require_once 'HTML/Template/Sigma.php';
 
 $form = new HTML_QuickForm('frmTest', 'post');

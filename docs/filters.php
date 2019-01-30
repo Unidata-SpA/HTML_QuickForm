@@ -11,8 +11,6 @@
 * @ignore
 */
 
-require_once 'HTML/QuickForm.php';
-
 function _filterAustin($value) 
 {
     return strtoupper($value).', GROOVY BABY!';
