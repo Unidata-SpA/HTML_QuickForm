@@ -7,7 +7,6 @@ if (defined('E_DEPRECATED')) {
 } else {
     error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT);
 }
-include_once 'HTML/QuickForm.php';
 $TestForm = new HTML_QuickForm();
 $TestForm->addElement('header', null, 'QuickForm tutorial example');
 $TestForm->toHtml(); // Without echo!

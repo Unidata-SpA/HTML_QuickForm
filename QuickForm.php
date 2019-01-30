@@ -370,7 +370,7 @@ class HTML_QuickForm extends HTML_Common
      */
     function registerRule($ruleName, $type, $data1, $data2 = null)
     {
-        include_once('HTML/QuickForm/RuleRegistry.php');
+//        include_once('HTML/QuickForm/RuleRegistry.php');
         $registry =& HTML_QuickForm_RuleRegistry::singleton();
         $registry->registerRule($ruleName, $type, $data1, $data2);
     } // end func registerRule
@@ -585,7 +585,8 @@ class HTML_QuickForm extends HTML_Common
         }
         $className = $GLOBALS['HTML_QUICKFORM_ELEMENT_TYPES'][$type][1];
         $includeFile = $GLOBALS['HTML_QUICKFORM_ELEMENT_TYPES'][$type][0];
-        include_once($includeFile);
+        // FIXME remove include, use autoload
+//        include_once($includeFile);
         $elementObject =& new $className();
         for ($i = 0; $i < 5; $i++) {
             if (!isset($args[$i])) {
@@ -1372,7 +1373,7 @@ class HTML_QuickForm extends HTML_Common
             return false;
         }
         // automatically register the rule if requested
-        include_once 'HTML/QuickForm/RuleRegistry.php';
+//        include_once 'HTML/QuickForm/RuleRegistry.php';
         $ruleName = false;
         if (is_object($name) && is_a($name, 'html_quickform_rule')) {
             $ruleName = !empty($name->name)? $name->name: strtolower(get_class($name));
@@ -1510,7 +1511,7 @@ class HTML_QuickForm extends HTML_Common
             return false;
         }
 
-        include_once('HTML/QuickForm/RuleRegistry.php');
+//        include_once('HTML/QuickForm/RuleRegistry.php');
         $registry =& HTML_QuickForm_RuleRegistry::singleton();
 
         foreach ($this->_rules as $target => $rules) {
@@ -1699,7 +1700,8 @@ class HTML_QuickForm extends HTML_Common
     function &defaultRenderer()
     {
         if (!isset($GLOBALS['_HTML_QuickForm_default_renderer'])) {
-            include_once('HTML/QuickForm/Renderer/Default.php');
+            // FIXME remove include, use autoload
+//            include_once('HTML/QuickForm/Renderer/Default.php');
             $GLOBALS['_HTML_QuickForm_default_renderer'] =& new HTML_QuickForm_Renderer_Default();
         }
         return $GLOBALS['_HTML_QuickForm_default_renderer'];
@@ -1744,7 +1746,7 @@ class HTML_QuickForm extends HTML_Common
             return '';
         }
 
-        include_once('HTML/QuickForm/RuleRegistry.php');
+//        include_once('HTML/QuickForm/RuleRegistry.php');
         $registry =& HTML_QuickForm_RuleRegistry::singleton();
         $test = array();
         $js_escape = array(
@@ -1856,7 +1858,7 @@ class HTML_QuickForm extends HTML_Common
      */
     function toArray($collectHidden = false)
     {
-        include_once 'HTML/QuickForm/Renderer/Array.php';
+//        include_once 'HTML/QuickForm/Renderer/Array.php';
         $renderer =& new HTML_QuickForm_Renderer_Array($collectHidden);
         $this->accept($renderer);
         return $renderer->toArray();

@@ -123,7 +123,7 @@ class HTML_QuickForm_RuleRegistry
 
         if (!isset($this->_rules[$class])) {
             if (!empty($path)) {
-                include_once($path);
+//                include_once($path);
             }
             $this->_rules[$class] =& new $class();
         }
